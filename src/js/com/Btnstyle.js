@@ -51,18 +51,13 @@ define(['jquery'],function($){
 			}
 		})
 		this.$getList.on('click',function(){
-			var listPage = $(this).parent().parent().parent().parent().prev().find('.Get-style')
+			var listPage = $(this).parent().parent().parent().parent().prev().find('.style-list')
 			if(!listdisplay){
-				listPage.css('display','block')
-				$(listPage.siblings()).css('display','none')
-				$(listPage.siblings('.Img-blur')).css('display','block')
-				$(this).parent().siblings().css('display','none')
+				listPage.animate({height:"40vh"})
 				this.innerHTML = '&#xe649;'
 				listdisplay = true
 			}else{
-				listPage.css('display','none')
-				$(this).parent().siblings().css('display','block')
-				$(listPage.siblings('.Play-page')).css('display','block')
+				listPage.animate({height:"0"})
 				this.innerHTML = '&#xe648;'
 				listdisplay = false
 			}

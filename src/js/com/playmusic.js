@@ -274,7 +274,7 @@ define(['jquery'],function($){
 	_Playmusic.prototype.renderSet = function(channels){
 
 		var html = channels.map(function(channel){
-			return '<li data-channel-id="' + channel.channel_id + '"> <img src="src/img/唱片.png" alt=""><p>'+ channel.name + '</p></li>'
+			return '<li data-channel-id="' + channel.channel_id + '">'+ channel.name + '</li>'
 		})
 		this.$stylelist.append(html)
 	}
