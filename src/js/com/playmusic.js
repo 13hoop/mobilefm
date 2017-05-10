@@ -217,7 +217,7 @@ define(['jquery'],function($){
 			_this.$musicList = []
 		for(var i=0;i<10;i++){	
 			this.get('https://jirenguapi.applinzi.com/fm/getSong.php',{channel:channels},function(ret){
-				var addmusic = [{'src':ret.song[0].url,'title':ret.song[0].title,'auther':ret.song[0].artist,'pic':ret.song[0].picture,'lrc':ret.song[0].lrc}]
+				var addmusic = [{'sid':ret.song[0],'src':ret.song[0].url,'title':ret.song[0].title,'auther':ret.song[0].artist,'pic':ret.song[0].picture,'lrc':ret.song[0].lrc}]
 				if(addmusic[0].auther==null) return
 				_this.$musicList.push(addmusic[0])	
 			})
@@ -267,7 +267,7 @@ define(['jquery'],function($){
 
 	}
 	_Playmusic.prototype.loadMusic = function(songObj){
-		
+		this.getLrc(songObj.sid)
 		this.music.src = songObj.src
 		this.$titleNode.text(songObj.title)
 		this.$authorNode.text(songObj.auther)
