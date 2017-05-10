@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Music-box</title>
+	<meta name="referrer" content="never">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="src/css/iconfont.css" type="text/css">
+	<link rel="stylesheet" href="src/css/style.css" type="text/css" />
+
+</head>
+<body>
+	<!--<div class="login">
+		
+	</div>-->
+	<header>
+		<nav class="Title-Set">
+			<i class="Set-like iconfont">&#xe699;</i>
+			<i class="Set-user iconfont">&#xe630;</i>
+			<i class="Set-vidio iconfont">&#xe6be;</i>
+		</nav>
+	</header>
+	<main>
+		<div class="Img-blur">
+			
+		</div>
+		<section class="Play-page">
+			<div class="Cover">
+				<div class="Set-Cover"></div>
+			</div>
+			<h2 class="title">Welcome Listing</h2>
+			<h3 class="auther">Aleen</h3>
+			<div class="Play-style">
+				<i class="fa-play-style iconfont">&#xe603;</i>
+			</div>
+			<div class="Set-volume">
+				<p><i class="volume-btn iconfont">&#xe6be;</i></p>
+				<div class="Volume">
+					<div class="volume-total"></div>
+					<div class="volume-now"></div>
+				</div>
+			</div>
+			<h4><i class="Set-share iconfont">&#xe605;</i></h4>
+			<nav class="Play-progress">
+				<div class="time-now">0:00</div>
+				<div class="bar">
+					<div class="progress-total"></div>
+					<div class="progress-now"></div>
+				</div>
+				<div class="time-end">0:00</div>
+			</nav>
+			<div>
+				<ul class="sings">
+				</ul>
+			</div>
+			<div class="litte-Lryic-page">
+				<ul></ul>
+			</div>
+		</section>
+		<section class="Lryic-page">
+			<ul></ul>
+		</section>
+		<section class="Get-style">
+			<div class="search-bar">
+				<input type="text" placeholder="搜索你喜欢的歌曲">
+				<button class="search-btn">搜索</button>
+			</div>
+			<div class="style-list">
+				<ul class="sings-list">
+				</ul>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<section>
+			<ul class="Play-Btn">
+				<li><i class="Get-list iconfont">&#xe648;</i></li>
+				<li><i class="fa fa-step-backward iconfont">&#xe647;</i></li>
+				<li><i class="fa fa-play iconfont">&#xe6c5;</i></li>
+				<li><i class="fa fa-step-forward iconfont">&#xe646;</i></li>
+				<li><i class="Get-lrc iconfont">&#xe779;</i></li>
+			</ul>
+		</section>
+	</footer>
+<script src='src/js/lib/bower_comonents/requirejs/require.js'></script>
+<script>
+    requirejs.config({
+    baseUrl:'src/js',
+    paths:{
+        'jquery':'lib/bower_comonents/jquery/dist/jquery-3.2.1.min'
+    }
+});
+
+requirejs(['app/index'])
+</script>
+</body>
+</html>
