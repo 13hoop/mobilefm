@@ -128,7 +128,7 @@ define(['jquery'],function($){
 		_this.updateProgress()
 	}
 	
-	_Playmusic.prototype.getLrc  = function(lrcUrl){
+	_Playmusic.prototype.getLrc  = function(sid){
 		let _this = this;
 		this.get('https://jirenguapi.applinzi.com/fm/getLyric.php',{sid:sid},function(ret){
 			_this.parseLyric(ret.lyric)
