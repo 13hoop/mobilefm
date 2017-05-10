@@ -129,11 +129,12 @@ define(['jquery'],function($){
 	}
 	
 	_Playmusic.prototype.getLrc  = function(lrcUrl){
-		var _this = this;
-		this.get(lrcUrl,{},function(ret){
-    		_this.parseLyric(ret)
-    		},'text')
+		let _this = this;
+		this.get('https://jirenguapi.applinzi.com/fm/getLyric.php',{sid:sid},function(ret){
+			_this.parseLyric(ret.lyric)
+    		})
 		}
+
 
 	_Playmusic.prototype.parseLyric = function(lyric){
 		var lines = lyric.split('\n'),
