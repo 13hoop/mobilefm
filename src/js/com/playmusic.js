@@ -100,7 +100,6 @@ define(['jquery'],function($){
 				_this.loadMusic(_this.$musicList[_this.musicIndex])
 				$('.Lryic-page ul').empty()
 				$('.litte-Lryic-page ul').empty()
-				_this.getLrc(_this.$musicList[_this.musicIndex].lrc)
 			}else{
 				alert("已经到最后了")
 				_this.musicIndex=9
@@ -113,14 +112,12 @@ define(['jquery'],function($){
 				_this.loadMusic(_this.$musicList[_this.musicIndex])
 				$('.Lryic-page ul').empty()
 				$('.litte-Lryic-page ul').empty()
-				_this.getLrc(_this.$musicList[_this.musicIndex].lrc)
 			}else{
 				_this.musicIndex --
 				_this.singstyle(_this.musicIndex)
 				_this.loadMusic(_this.$musicList[_this.musicIndex])
 				$('.Lryic-page ul').empty()
 				$('.litte-Lryic-page ul').empty()
-				_this.getLrc(_this.$musicList[_this.musicIndex].lrc)
 			}
 		})
 		
@@ -158,7 +155,7 @@ define(['jquery'],function($){
 	    result.sort(function(a, b) {
 	        return a[0] - b[0];
 	    })
-
+	}
 	_Playmusic.prototype.Lrcpush = function(str){
 
 		for(var i=0;i<str.length;i++){
@@ -227,7 +224,6 @@ define(['jquery'],function($){
 			_this.getSings(_this.$musicList)
 			$('.Lryic-page ul').empty()
 			$('.litte-Lryic-page ul').empty()
-			_this.getLrc(_this.$musicList[0].lrc)
 			if(_this.$musicList.length!==10){
 				laod()
 			}
