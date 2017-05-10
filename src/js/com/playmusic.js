@@ -143,11 +143,12 @@ define(['jquery'],function($){
 	    while (!pattern.test(lines[0])) {
 	        lines = lines.slice(1);
 	    }
-	   	lines[lines.length - 1].length === 0 && lines.pop()
+	    console.log(lines)
+	    lines[lines.length - 1].length === 0 && lines.pop()
 	    lines.forEach(function(v,i,a){
 	    	var time = v.match(pattern),
 	    		value = v.replace(pattern,'')
-	    	if(time == null) return
+	    	if(time == null) return;
 	    	time.forEach(function(v1,i1,a1){
 	    		var t = v1.slice(1,-1).split(':')
 	    		result.push([parseInt(t[0], 10) * 60 + parseFloat(t[1]), value])
@@ -157,9 +158,6 @@ define(['jquery'],function($){
 	    result.sort(function(a, b) {
 	        return a[0] - b[0];
 	    })
-
-    	this.Lrcpush(result)
-	}
 
 	_Playmusic.prototype.Lrcpush = function(str){
 
